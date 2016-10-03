@@ -1,0 +1,631 @@
+ // this is area is for reserved class
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#main-wrapper { }
+.fl { float:left; }
+.fr { float:right; }
+.clr { display: block; float:none; clear:both; }
+.pos-rel { position: relative; overflow: hidden; }
+.pos-ab { position: absolute; }
+.co-white { color: $coWhite; }
+.co-black { color: $coBlack; }
+
+.bp-circle { @include border-radius(50%); }
+.mobile-input { @include appearance(none); @include border-radius(0); }
+.preloader { position:fixed; width:100%; height:100%; overflow:hidden; z-index: 1002; background: $coBlack; }
+.spinner { position: absolute; width:80px; height:80px; top: 50%; left: 50%; margin-left:-40px; margin-top:-40px; @include animation(rotatee 2.0s infinite linear); }
+.s-dot { display: inline-block; position: absolute; width:60%; height:60%;  top: 0; background-color:$coGreen; @include border-radius(100%); @include animation(bouncee 2.0s infinite ease-in-out); }
+.s-dot2 { top: auto; bottom: 0px; @include animation-delay( -1.0s); }
+@include keyframes(rotatee) { 100% { @include transform(rotate(360deg)); } }
+@include keyframes(bouncee) { 0%, 100% { @include transform(scale(0.0)); } 50% { @include transform(scale(1.0)); } }
+.explorer .preloader { background:#fff url('../images/page_template/loading.gif') no-repeat center; }
+.explorer .preloader .spinner { display:none; }
+// this is area is for reserved class
+
+// you can include here the rest of your class name eg. home page
+
+.hiding {
+	opacity: 0;
+}
+
+.visible {
+	opacity: 1;
+}
+
+.sec-title {
+	font-weight: 900;
+
+	&.small {
+		font-size: 35px;
+
+		@include breakpoint(tablet) {
+			font-size: 28px;
+		}
+	}
+
+	&.medium {
+		font-size: 55px;
+
+		@include breakpoint(mobile) {
+			font-size: 32px;
+		}
+	}
+
+
+}
+
+.container {
+	max-width: 1024px;
+}
+
+.banner-wrap {
+  width: 100%;
+  background: $coBlack;
+  position: relative;
+  text-align: center;
+  min-height: 600px;
+  overflow: hidden;
+
+  @include breakpoint(tablet2) {
+  	min-height: 420px;
+  	background: $coGreen;
+  }
+
+
+  .container {
+  	position: relative;
+  }
+
+  .table-cell {
+  	padding-top: 70px;
+  	padding-right: 15px;
+  	padding-left: 15px;
+  }
+}
+
+.table-wrap {
+	display: table;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	.table-cell {
+		display: table-cell;
+		width: 100%;
+		height: 100%;
+		vertical-align: middle;
+	}
+
+}
+
+.home-banner-holder {
+	min-height: 600px;
+
+	@include breakpoint(tablet2) {
+	  	min-height: 420px;
+	  }
+}
+
+.background-image-holder {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000;
+	top: 0vh;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% 50% !important;
+    @include transition(all 0s linear);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+
+    min-height: 600px;
+
+	@include breakpoint(tablet2) {
+  		min-height: 420px;
+  	}
+    
+    
+}
+.background-image-holder img { display:none;}
+
+.banner-anim {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	@include transition(opacity 1.5s cubic-bezier(1, 0, 0, 1));
+    -webkit-transition: -moz-transform 1.5s cubic-bezier(1, 0, 0, 1);
+    -moz-transition: -webkit-transform 1.5s cubic-bezier(1, 0, 0, 1);
+    transition: transform 1.5s cubic-bezier(1, 0, 0, 1);
+
+
+    @include transform(scale3d(1.3, 1.3, 1.3));
+
+    &.animated {
+    	opacity: 1;
+    	@include transform(scale3d(1, 1, 1));
+    }
+}
+
+
+.btn {
+	font-size: 15px;
+	border: 1px solid transparent;
+	line-height: 40px;
+	padding: 0px 25px;
+	text-transform: uppercase;
+	display: inline-block;
+
+	&.btn-transparent {
+		border: 1px solid $coWhite;
+		color: $coWhite;
+
+		&:hover {
+			background: $coWhite;
+			color: $coGreen;
+		}
+	}
+}
+
+.home-text {
+	position: absolute;
+    top: 0px;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    padding-top: 68px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: $coWhite;
+    text-align: center;
+    opacity: 0;
+    @include transform(translateY(60px));
+    @include transition(all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1));
+
+    &.animated {
+    	opacity: 1;
+    	@include transform(translateY(0px));
+    }
+
+    h1 {
+    	font-weight: 900;
+    	margin-bottom: 10px;
+
+    	@include breakpoint(tablet) {
+    		font-size: 52px;
+    	}
+
+    	@include breakpoint(tablet2) {
+    		font-size: 42px;
+    	}
+
+    	@include breakpoint(tablet2) {
+    		font-size: 32px;
+    		line-height: 38px;
+    	}
+    }
+
+    p {
+    	font-size: 20px;
+    	line-height: 24px;
+    	font-weight: 300;
+
+    	@include breakpoint(tablet) {
+
+			br {
+				display: none;
+			}
+    	}
+
+    	@include breakpoint(tablet2) {
+    		font-size: 18px;
+    	}
+
+    	@include breakpoint(mobile) {
+    		font-size: 16px;
+    		line-height: 21px;
+    	}
+    }
+
+}
+
+.icon-logo {
+	width: 135px;
+	height: auto;
+	margin: 0 auto 30px;
+	@include transition(all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1));
+	opacity: 0;
+	@include transform(scale(0) rotate(180deg));
+
+	&.animated {
+		opacity: 1;
+		@include transform(scale(1) rotate(0deg));
+	}
+
+	@include breakpoint(tablet) {
+		width: 80px;
+	}
+
+	@include breakpoint(tablet2) {
+		display: none;
+	}
+
+	img {
+		width: 100%;
+		display: block;
+		height: auto;
+	}
+}
+
+.input-wrap {
+	position: relative;
+}
+
+.sec-pad {
+	padding: 50px 0;
+}
+
+.newsletter-wrap {
+	width: 460px;
+	margin: 0 auto;
+	padding: 8px;
+	background: rgba(230, 231, 232, 0.8);
+	margin-top: 55px;
+
+	@include breakpoint(mobile) {
+		width: 100%;
+		margin-top: 20px;
+		background: none;
+		padding: 0;
+	}
+
+	input[type="email"] {
+		font-size: 18px;
+		font-weight: 300;
+		width: 100%;
+		padding: 10px 5px;
+		background: transparent;
+		border: none;
+		padding-right: 120px;
+
+		@include breakpoint(mobile) {
+			background: rgba(230, 231, 232, 0.8);
+			padding-right: 5px;
+			font-size: 14px;
+		}
+
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  color: $defaultColor;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+		  color: $defaultColor;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+		  color: $defaultColor;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+		  color: $defaultColor;
+		}
+	}
+
+	input[type="submit"] {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: $coRed;
+		color: $coWhite;
+
+		@include breakpoint(mobile) {
+			position: relative;
+			margin-top: 10px;
+		}
+
+		&:hover {
+			background: darken($coRed, 10%);
+		}
+	}
+}
+
+.watch-video {
+	border: 2px solid $coWhite;
+	border-radius: 20px;
+	padding: 0 45px 0px 20px;
+	line-height: 38px;
+	position: relative;
+	color: $coWhite;
+	min-width: 140px;
+	font-size: 12px;
+	margin-top: 50px;
+	position: relative;
+	overflow: hidden;
+
+	&:hover {
+		color: $coWhite;
+
+		&:before {
+			@include transform(scale(1));
+			opacity: 1;
+		}
+
+		span.icon-play {
+
+			.fa {
+				color: darken($coRed, 10%);
+			}
+		}
+	}
+
+	&:before {
+		content:'';
+		width: 100%;
+		background: $coRed;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		opacity: 0;
+		border-radius: 20px;
+		@include transform(scale(0));
+		@include transition(all 0.4s cubic-bezier(1, 0, 0, 1));
+	}
+
+	@include breakpoint(mobile) {
+		margin-top: 30px;
+	}
+
+	span {
+		position: relative;
+		z-index: 2;
+	}
+
+	span.icon-play {
+		width: 33px;
+		height: 33px;
+		background: $coWhite;
+		border-radius: 50%;
+		display: inline-block;
+		vertical-align: middle;
+		position: absolute;
+		top: 2px;
+		right: 3px;
+		color: $coRed;
+		text-align: center;
+
+		.fa {
+			line-height: 33px;
+			display: inline-block;
+			font-size: 16px;
+			position: relative;
+			top: -2px;
+			right: -2px;
+		}
+
+		
+	}
+}
+
+#home-banner {
+	position: relative;
+	z-index: 1003;
+}
+
+#more-feature {
+	min-height: 300px;
+	background: url('../images/feature-bg.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.fl-img {
+	width: 142px;
+	height: 142px;
+	background: $coWhite;
+	border-radius: 50%;
+	margin: 0 auto 25px;
+
+	@include breakpoint(mobile) {
+		margin-bottom: 15px;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+}
+
+.fl-text {
+	p {
+		font-size: 20px;
+		text-align: center;
+		font-weight: 300;
+	}
+}
+
+.feature-list {
+	margin-top: 40px;
+
+	ul {
+
+		&:after {
+			content:'';
+			display: block;
+			float: none;
+			clear: both;
+		}
+
+		li {
+			width: 25%;
+			padding: 0 15px 30px;
+			float: left;
+
+			@include breakpoint(tablet) {
+				width: 33.33%;
+			}
+
+			@include breakpoint(tablet2) {
+				width: 50%;
+			}
+
+			@include breakpoint(mobile) {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.floating-img {
+	height: 0;
+	padding-bottom: 50%;
+	width: 40%;
+	overflow: hidden;
+	position: relative;
+
+	@include breakpoint(tablet) {
+		height: auto;
+		padding-bottom: 0;
+
+	}
+
+	@include breakpoint(phablet) {
+		width: 100%;
+		display: none;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+}
+
+.floating-text {
+	position: absolute;
+	top: 50%;
+	width: 50%;
+	@include transform(translateY(-50%));
+	text-align: center;
+	padding: 0px 15px;
+
+	@include breakpoint(tablet) {
+		position: relative;
+		top: 0;
+		@include transform(translateY(0%));
+		width: 100%;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		
+	}
+
+	@include breakpoint(mobile) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+
+	&.right {
+		right: 0;
+	}
+
+	h3 {
+		color: $coGreen;
+		font-weight: 900;
+		margin-bottom: 25px;
+
+		@include breakpoint(mobile) {
+			margin-bottom: 15px;
+		}
+	}
+
+	p {
+		font-size: 20px;
+		line-height: 24px;
+		font-weight: 300;
+
+		@include breakpoint(tablet) {
+			font-size: 16px;
+		}
+	}
+
+	.fl-img {
+		background: $coGreen;
+	}
+}
+
+.full-boxes {
+	position: relative;
+
+	.container {
+		position: relative;
+
+		@include breakpoint(tablet) {
+			float: left;
+			width: 60%;
+		}
+
+		@include breakpoint(phablet) {
+			float: left;
+			width: 100%;
+		}
+	}
+}
+
+.phone-holder {
+	width: auto;
+    height: 76%;
+    position: absolute;
+	right: 100%;
+	bottom: -50px;
+	margin-right: -50%;
+	max-height: 687px;
+
+	@include breakpoint(tablet) {
+		margin-right: 0;
+	}
+
+	img {
+		width: auto;
+		height: 100%;
+		display: block;
+	}
+}
+
+.phone-width {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	z-index: 3;
+	top: 0;
+
+	@include breakpoint(tablet) {
+		display: none;
+	}
+
+	&.right {
+		right: 0;
+
+		.phone-holder {
+			left: 100%;
+			margin-left: -50%;
+
+			@include breakpoint(tablet) {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+.bg-blue {
+	background: $coBlue;
+}
