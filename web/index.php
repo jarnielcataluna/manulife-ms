@@ -38,9 +38,9 @@
 	<div class="mobile-menu menu">
 		<ul>
 			<li><a href="#home-banner">Home</a></li>
-			<li><a href="#section2">Section 1</a></li>
-			<li><a href="#section3">Section 2</a></li>
-			<li><a href="#section4">Section 3</a></li>
+			<li><a href="#section2">About</a></li>
+			<li><a href="#section3">How To</a></li>
+			<li><a href="#section4">Investment</a></li>
 			<li><a href="#more-feature">More Features</a></li>
 		</ul>
 		<a href="#" class="btn btn-transparent btn-signup fr">Sign Up</a>
@@ -48,9 +48,9 @@
 	<div class="sec-menu">
 		<ul>
 			<li><a href="#home-banner" class="active sm-dot">1 <span>Home</span></a></li>
-			<li><a href="#section2" class="sm-dot">2 <span>Section 1</span></a></li>
-			<li><a href="#section3" class="sm-dot">3 <span>Section 2</span></a></li>
-			<li><a href="#section4" class="sm-dot">4 <span>Section 3</span></a></li>
+			<li><a href="#section2" class="sm-dot">2 <span>About</span></a></li>
+			<li><a href="#section3" class="sm-dot">3 <span>How To</span></a></li>
+			<li><a href="#section4" class="sm-dot">4 <span>Investment</span></a></li>
 			<li><a href="#more-feature" class="sm-dot">5 <span>More Features</span></a></li>
 		</ul>
 	</div>
@@ -63,9 +63,9 @@
 				<div class="menu">
 					<ul>
 						<li><a href="#home-banner" class="active">Home</a></li>
-						<li><a href="#section2">Section 1</a></li>
-						<li><a href="#section3">Section 2</a></li>
-						<li><a href="#section4">Section 3</a></li>
+						<li><a href="#section2">About</a></li>
+						<li><a href="#section3">How To</a></li>
+						<li><a href="#section4">Investment</a></li>
 						<li><a href="#more-feature">More Features</a></li>
 					</ul>
 					<a href="#" class="btn btn-transparent btn-signup fr">Sign Up</a>
