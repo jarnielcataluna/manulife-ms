@@ -25,7 +25,11 @@ function updateNav() {
             currentHash = liItems.find('a[href="#'+$(this).attr('id')+'"]');
 
             liItems.children('a').removeClass('active');
-            currentHash.addClass('active');
+            currentHash.addClass('active'); 
+        }
+
+        if($(this).offset().top <= curPos - 50){
+            $(this).find('.phone-width').addClass('slide-left');
         }
 
     });
@@ -192,7 +196,7 @@ $(window).load(function() {
 
 $(window).scroll(function() {
     updateNav();
-   
+
 });
 
 $(window).on('scroll load', function(){

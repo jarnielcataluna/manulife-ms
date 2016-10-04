@@ -109,7 +109,7 @@
 					<h3 class="sec-title small">Key Feature Highlight</h3>
 					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
 				</div>
-				<div class="phone-width animated hiding" data-animation="fadeInLeftBig" data-delay="300">
+				<div class="phone-width animated-left">
 					<div class="phone-holder"><img src="images/phone-holder.png" alt=""></div>
 				</div>
 			</div>
@@ -126,7 +126,7 @@
 					<h3 class="sec-title small">Key Feature Highlight</h3>
 					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
 				</div>
-				<div class="phone-width right animated hiding" data-animation="fadeInRightBig" data-delay="300">
+				<div class="phone-width right animated-right">
 					<div class="phone-holder"><img src="images/phone-holder3.png" alt=""></div>
 				</div>
 			</div>
@@ -143,7 +143,7 @@
 					<h3 class="sec-title small">Key Feature Highlight</h3>
 					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
 				</div>
-				<div class="phone-width animated hiding" data-animation="fadeInLeftBig" data-delay="300">
+				<div class="phone-width animated-left">
 					<div class="phone-holder"><img src="images/phone-holder2.png" alt=""></div>
 				</div>
 			</div>
@@ -166,7 +166,7 @@
 								</div>
 							</div>
 						</li>
-						<li class="animated hiding" data-animation="fadeInUp">
+						<li class="animated" data-animation="fadeInUp">
 							<div class="fl-item">
 								<div class="fl-img">
 									

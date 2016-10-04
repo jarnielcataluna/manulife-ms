@@ -607,6 +607,29 @@
 	position: absolute;
 	z-index: 3;
 	top: 0;
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+
+	&.animated-left {
+		@include transform(translateX(-100%));
+		@include transition(all 0.7s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1));
+
+		&.slide-left {
+			@include transform(translateX(0));
+			opacity: 1;
+		}
+	}
+
+
+	&.animated-right {
+		@include transform(translateX(100%));
+		@include transition(all 0.7s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1));
+
+		&.slide-left {
+			@include transform(translateX(0));
+			opacity: 1;
+		}
+	}
 
 	@include breakpoint(tablet) {
 		display: none;

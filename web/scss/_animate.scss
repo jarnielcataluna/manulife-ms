@@ -35,6 +35,7 @@ span,
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-transition: all 300ms cubic-bezier(1, 0, 0, 1); -moz-transition: all 300ms cubic-bezier(1, 0, 0, 1); -o-transition: all 300ms cubic-bezier(1, 0, 0, 1); transition: all 300ms cubic-bezier(1, 0, 0, 1);
 }
 
 .animated.hinge {
