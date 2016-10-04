@@ -28,7 +28,7 @@ function updateNav() {
             currentHash.addClass('active'); 
         }
 
-        if($(this).offset().top <= curPos - 50){
+        if($(this).offset().top <= curPos){
             $(this).find('.phone-width').addClass('slide-left');
         }
 
