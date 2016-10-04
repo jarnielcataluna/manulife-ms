@@ -81,12 +81,12 @@
   }
 
   .table-cell {
-  	padding-top: 70px;
-  	padding-right: 15px;
-  	padding-left: 15px;
+  	padding-top: 30px;
+  	xpadding-right: 15px;
+  	xpadding-left: 15px;
 
   	@include breakpoint(phablet) {
-  		padding-top: 30px;
+  		padding-top: 0px;
   		padding-bottom: 40px;
   	}
   }
@@ -395,7 +395,7 @@
 	}
 
 	@include breakpoint(mobile) {
-		margin-top: 30px;
+		margin-top: 20px;
 	}
 
 	span {

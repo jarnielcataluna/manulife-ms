@@ -25636,14 +25636,14 @@ footer {
 }
 
 .banner-wrap .table-cell {
-  padding-top: 70px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-top: 30px;
+  xpadding-right: 15px;
+  xpadding-left: 15px;
 }
 
 @media (max-width: 640px) {
   .banner-wrap .table-cell {
-    padding-top: 30px;
+    padding-top: 0px;
     padding-bottom: 40px;
   }
 }
@@ -26029,7 +26029,7 @@ footer {
 
 @media (max-width: 480px) {
   .watch-video {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
 
