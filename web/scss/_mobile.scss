@@ -1,7 +1,7 @@
 // include all your new classess here that is intended for mobile. Only if necessary but please use breakpoints mixins
 
 
-@media screen and (max-height: 768px) {
+@media screen and (max-height: 768px) and (min-width: 767px) {
 	
 	.icon-logo {
 		width: 80px;
