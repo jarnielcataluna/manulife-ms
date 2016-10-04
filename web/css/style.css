@@ -25909,6 +25909,8 @@ footer {
   background: transparent;
   border: none;
   padding-right: 120px;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 @media (max-width: 480px) {
@@ -25945,6 +25947,8 @@ footer {
   right: 0;
   background: #ef4136;
   color: #ffffff;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 @media (max-width: 480px) {

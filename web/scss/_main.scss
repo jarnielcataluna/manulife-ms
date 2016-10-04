@@ -300,6 +300,8 @@
 		background: transparent;
 		border: none;
 		padding-right: 120px;
+		-webkit-appearance: none;
+		appearance: none;
 
 		@include breakpoint(mobile) {
 			background: rgba(230, 231, 232, 0.8);
@@ -327,6 +329,8 @@
 		right: 0;
 		background: $coRed;
 		color: $coWhite;
+		-webkit-appearance: none;
+		appearance: none;
 
 		@include breakpoint(mobile) {
 			position: relative;
