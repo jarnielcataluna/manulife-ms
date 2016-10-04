@@ -294,6 +294,10 @@
 	background: rgba(230, 231, 232, 0.8);
 	margin-top: 55px;
 
+	@include breakpoint(phablet) {
+		margin-top: 30px;
+	}
+
 	@include breakpoint(mobile) {
 		width: 100%;
 		margin-top: 20px;
@@ -394,7 +398,7 @@
 		@include transition(all 0.4s cubic-bezier(1, 0, 0, 1));
 	}
 
-	@include breakpoint(mobile) {
+	@include breakpoint(phablet) {
 		margin-top: 20px;
 	}
 

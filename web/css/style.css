@@ -25905,6 +25905,12 @@ footer {
   margin-top: 55px;
 }
 
+@media (max-width: 640px) {
+  .newsletter-wrap {
+    margin-top: 30px;
+  }
+}
+
 @media (max-width: 480px) {
   .newsletter-wrap {
     width: 100%;
@@ -26027,7 +26033,7 @@ footer {
   transition: all 0.4s cubic-bezier(1, 0, 0, 1);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .watch-video {
     margin-top: 20px;
   }
