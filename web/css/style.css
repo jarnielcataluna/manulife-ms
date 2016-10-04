@@ -25641,6 +25641,13 @@ footer {
   padding-left: 15px;
 }
 
+@media (max-width: 640px) {
+  .banner-wrap .table-cell {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}
+
 .table-wrap {
   display: table;
   top: 0;
@@ -25772,6 +25779,12 @@ footer {
   -ms-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@media (max-width: 640px) {
+  .home-text {
+    padding-bottom: 40px;
+  }
 }
 
 .home-text.animated {
