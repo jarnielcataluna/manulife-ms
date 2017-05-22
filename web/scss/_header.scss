@@ -1,381 +1,127 @@
 // ionclude all your related style here in the header, you can leave it empty if the page has no header
-
-.hide { position:relative;}
-.ease,a,input[type="submit"],button { @include transition(all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1)); }
-.loader { position:relative; overflow:hidden; background:#fff url('../images/page_template/loading.gif') no-repeat center; }
-.auto { max-width:$maxWidth; margin: 0 auto; }
-#main-container { height:100%; height: auto !important; min-height:100%; overflow: hidden; }
-header { 
-
-	position: relative;
-
-	.container {
-		position: relative;
-	}
+html, body { 
+	height:100%; 
+	min-height:100%;
+	
 }
 
+body.windows {
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-.head-wrap {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1005;
-	width: 100%;
-	padding-top: 15px;
-	padding-right: 15px;
-	padding-left: 15px;
-	background: transparent;
-	@include transform(translateY(-80px));
-	@include transition(all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1));
-	-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
-	-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
-	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
-	&.animate {
-		background: rgba(1, 156, 64, 0.8);
-		padding-top: 5px;
-		-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
-		-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
-		box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+.hide { 
+	position:relative;
+}
 
-		.container {
-			border-bottom: none;
-		}
-	}
+.ease,a,input[type="submit"],button { 
 
-	@include breakpoint(tablet) {
-		background: rgba(1, 156, 64, 0.8);
-		padding-top: 5px;
-		-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
-		-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
-		box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+	@include transition(all 0.5s ease);
+}
+.loader { 
+	position:relative; 
+	overflow:hidden; 
+	background:#fff url('../images/page_template/loading.gif') no-repeat center; 
+}
 
-		.container {
-			border-bottom: none;
-		}
-	}
+#main-container { 
+	height:100%; 
+	height: auto !important; 
+	min-height:100%;
+}
 
-	&.animated {
-		@include transform(translateY(0px));
-	}
-
-	&:after {
-		content:'';
-		display: block;
-		float: none;
-		clear: both;
-	}
-
-	.container {
-		border-bottom: 1px solid $coWhite;
-		padding-bottom: 5px;
-		padding-left: 0;
-		padding-right: 0;
-
-		@include breakpoint(tablet) {
-			position: static;
-			border-bottom: none;
-		}
-
-	}
-
-	.btn {
-		margin-top: 3px;
-	}
-
-	@include breakpoint(tablet2) {
-		padding-right: 0;
-		padding-left: 0;
-
-		.container {
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-	}
-
-	.btn-signup {
-		display: block;
-
-		@include breakpoint(tablet) {
-			display: none;
-		}
-	}
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
 }
 
 .logo {
-	float: left;
-	max-width: 180px;
+	width: 306px;
+	margin: 15px auto 30px;
+
+	@include breakpoint(tablet2) {
+		width: 160px;
+	}
 
 	img {
+		display: block;
 		width: 100%;
 		height: auto;
 	}
 }
 
-.menu {
-	text-align: center;
-	margin-top: 3px;
-
-	@include breakpoint(tablet) {
-		display: none;
-		position: fixed;
-		top: 0;
-		height: 100%;
-		width: 100%;
-		overflow: auto;
-		z-index: 1004;
-	}
-
-	.btn-signup {
-		display: none;
-
-		@include breakpoint(tablet) {
-			display: block;
-		}
-	}
-
-	ul {
-
-		@include breakpoint(tablet) {
-			padding-top: 100px;
-		}
-
-		li {
-			display: inline-block;
-			
-
-			@include breakpoint(tablet) {
-				display: block;
-				text-align: center;
-				opacity: 0;
-				@include transition(all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1));
-				@include transform(translateY(-40px) scale(0.9));
-
-				&.is-open {
-					@include transform(translateY(0px) scale(1));
-					opacity: 1;
-				}
-			}
-
-			a {
-				color: $coWhite;
-				font-size: 16px;
-				display: block;
-				padding: 9px 8px 8px 8px;
-				background: transparent;
-				position: relative;
-				text-align: center;
-				font-weight: 500;
-
-				@include breakpoint(tablet) {
-					color: $defaultColor;
-					font-size: 20px;
-				}
-
-				&:hover, &.active {
-
-					&:before {
-						opacity: 1;
-						@include transform(scale(1));
-					}
-				}
-
-				&:before {
-					content: '';
-					width: 100%;
-					position: absolute;
-					bottom: 0;
-					left: 0;
-					@include transform(scale(0));
-					@include transition(all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1));
-					opacity: 0;
-					height: 3px;
-					background: $coWhite;
-
-					@include breakpoint(tablet) {
-						display: none;
-					}
-				}
-			}
-		}
-	}
-}
-
-
-.sec-menu {
-	position: fixed;
-	right: 25px;
-	top: 50%;
-	z-index: 1001;
-	margin-top: -80px;
-
-	@include breakpoint(desktop) {
-		display: none;
-	}
-
-	ul {
-
-		li {
-			display: block;
-			padding-bottom: 20px;
-			text-align: center;
-			position: relative;
-			@include transition(all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1));
-			@include transform(translateY(-40px) scale(0.9));
-
-			&.is-open {
-				@include transform(translateY(0px) scale(1));
-				opacity: 1;
-			}
-
-			&:before {
-				xcontent:'';
-				height: 20px;
-				background: $coBlue;
-				position: absolute;
-				bottom: 0;
-				left: 50%;
-				width: 2px;
-				margin-left: -1px;
-			}
-
-			&:last-child {
-
-				&:before {
-					display: none;
-				}
-			}
-		}
-	}
-
-	.sm-dot {
-		display: block;
-		width: 16px;
-		height: 16px;
-		background: rgba($coBlue, 0.6);
-		text-align: center;
-		border-radius: 50%;
-		text-indent: -9999px;
-		position: relative;
-		z-index: 1;
-
-		span {
-			position: absolute;
-			right: 100%;
-			top: -2px;
-			padding-right: 20px;
-			color: $coBlue;
-			text-align: right;
-			font-size: 14px;
-			display: inline-block;
-			vertical-align: middle;
-			opacity: 0;
-			@include transition(all 0.3s 0.2s cubic-bezier(0.215, 0.61, 0.355, 1));
-			@include transform(translateX(-20px));
-			-webkit-backface-visibility: hidden;
-		}
-
-		&:hover, &.active {
-
-			&:before {
-				opacity: 1;
-				@include transform(scale(1));
-				background: $coWhite;
-			}
-
-			&:after {
-				opacity: 1;
-				@include transform(scale(1));
-			}
-
-			span {
-				opacity: 1;
-				@include transform(translateX(0px));
-				
-				
-			}
-		}
-
-		&:before {
-			content:'';
-			width: 6px;
-			height: 6px;
-			display: block;
-			background: rgba(255, 255, 255, 0.9);
-			border-radius: 50%;
-			position: absolute;
-			@include transition(all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1));
-			top: 50%;
-			left: 50%;
-			margin-left: -3px;
-			margin-top: -3px;
-			z-index: 2;
-		}
-
-		&:after {
-			content:'';
-			width: 12px;
-			height: 12px;
-			display: block;
-			background: transparent;
-			border-radius: 50%;
-			border: 2px solid $coWhite;
-			position: absolute;
-			top: 0;
-			left: 0;
-			@include transform(scale(0));
-			opacity: 0;
-			@include transition(all 0.3s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1));
-			z-index: 3;
-
-		}
-
-	}
-}
-
-
 .header-hamburger {
-	display: none;
-	float: right;
-	position: relative;
+	position: fixed;
 	cursor: pointer;
-	z-index: 101;
-	width: 25px;
-	height: 25px;
+	z-index: 1004;
+	width: 38px;
+	height: 38px;
 	cursor: pointer;
-	background-color: transparent;
-	margin: 10px 0 10px 15px;
-	right:0; 
+	padding: 0;
+	border-radius: 6px;
+	border: 1px solid #e8e8e8;
+	right: 12px;
+	top: 15px; 
+	background: $coWhite;
 	@include transition(all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1));
 
-	@include breakpoint(tablet) {
+	@include breakpoint(tablet2) {
 		display: block;
+
 	}
 }
 
-.header-hamburger span, .header-hamburger span:after, .header-hamburger span:before {
+.header-hamburger a {
+	width: 40px;
+	height: 40px;
+	display: block;
+	@include transform(rotate(0deg));
+	@include transition(transform 0.4s ease);
+}
+
+.header-hamburger span:first-child, .header-hamburger span:nth-child(2), .header-hamburger span:nth-child(3) {
 	content: '';
 	cursor: pointer;
 	height: 2px;
 	width: 20px;
-	background: $coWhite;
+	background: #4d4d4d;
 	position: absolute;
 	display: block;
-	@include transition(all 0.2s ease-in-out);
-	@include transform(rotate(0deg));
+	@include transition(transform 0.4s ease-in-out);
 }
 
 .header-hamburger span {
-	  right: 0px;
-	  top: 12px;
+	right: 10px;
+	top: 18px;
+
+	&:first-child {
+		@include transform(translate(0px, -7px) scale(1));
+	}
+
+	&:last-child {
+		@include transform(translate(0px, 0px) scale(1));
+	}
+
+	&:last-child {
+		@include transform(translate(0px, 7px) scale(1));
+	}
 }
 
-.header-hamburger span:before {
-  	top: -7px;
+.header-hamburger.active {
+
+	a {
+		@include transform(rotate(90deg));
+	}
 }
 
-.header-hamburger span:after {
-  	top: 7px;
+/*.header-hamburger.active {
+	background: transparent;
 }
 
 .header-hamburger.active span {
@@ -384,34 +130,19 @@ header {
 
 .header-hamburger.active span:before, .header-hamburger.active span:after {
   	top: 0;
+  	background: $defaultColor;
+}*/
+
+.header-hamburger.active span:nth-child(2) {
+  	@include transform(rotate(0deg) scale(0))
 }
 
-.header-hamburger.active span:before {
-  	@include transform(rotate(45deg));
+.header-hamburger.active span:first-child {
+  	@include transform(rotate(45deg) scale(1));
 }
 
-.header-hamburger.active span:after {
- 	@include transform(rotate(-45deg));
+.header-hamburger.active span:last-child {
+ 	@include transform(rotate(-45deg) scale(1));
 }
 
-.mobile-menu {
-	background: rgba(255, 255, 255, 0.9); 
-	text-align: center;
-	display: none;
-
-
-	.btn-signup.btn-transparent {
-		float: none;
-		clear: both;
-		display: inline-block;
-		margin-top: 20px;
-		background: $coGreen;
-		border: 1px solid $coGreen !important;
-
-		&:hover {
-			background: rgba($coGreen, 0.9);
-			color: $coWhite;
-		}
-	}
-}
 

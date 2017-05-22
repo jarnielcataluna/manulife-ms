@@ -1,0 +1,53 @@
+ // this is area is for reserved class
+#main-wrapper { }
+.fl { float:left; }
+.fr { float:right; }
+.clr { display: block; float:none; clear:both; }
+.bp-set { display:inline-block; *display:inline;
+  &.vm { vertical-align:middle; }
+  &.vt { vertical-align:top; }
+  &.vb { vertical-align:bottom; }
+}
+.bp-box { @include box-sizing(border-box); }
+.bp-rel { position:relative; }
+.bp-ab { position:absolute; }
+.co-black { color: $coBlack; }
+.co-white { color: $coWhite; }
+.pad-edge { padding-left: 15px; padding-right: 15px; }
+.bp-img {
+  img { max-width: 100%; height: auto; }
+  &.wide img { width: 100%; }
+}
+.bp-circle { @include border-radius(50%); }
+.mobile-input { @include appearance(none); @include border-radius(0); }
+.pt1{padding-top:$spaceOne}
+.pt2{padding-top:$spaceTwo; @include breakpoint(phablet) { padding-top: $spaceOne; } }
+.pt3{padding-top:$spaceThree; @include breakpoint(phablet) { padding-top: $spaceTwo; } }
+.pt4{padding-top:$spaceFour; @include breakpoint(phablet) { padding-top: $spaceThree; } }
+.pt5{padding-top:$spaceFive; @include breakpoint(phablet) { padding-top: $spaceFour; } }
+.pb1{padding-bottom:$spaceOne}
+.pb2{padding-bottom:$spaceTwo; @include breakpoint(phablet) { padding-bottom: $spaceOne; } }
+.pb3{padding-bottom:$spaceThree; @include breakpoint(phablet) { padding-bottom: $spaceTwo; } }
+.pb4{padding-bottom:$spaceFour; @include breakpoint(phablet) { padding-bottom: $spaceThree; } }
+.pb5{padding-bottom:$spaceFive; @include breakpoint(phablet) { padding-bottom: $spaceFour; } }
+.mt1{margin-top:$spaceOne}
+.mt2{margin-top:$spaceTwo; @include breakpoint(phablet) { margin-top: $spaceOne; } }
+.mt3{margin-top:$spaceThree; @include breakpoint(phablet) { margin-top: $spaceTwo; } }
+.mt4{margin-top:$spaceFour; @include breakpoint(phablet) { margin-top: $spaceThree; } }
+.mt5{margin-top:$spaceFive; @include breakpoint(phablet) { margin-top: $spaceFour; } }
+.mb1{margin-bottom:$spaceOne}
+.mb2{margin-bottom:$spaceTwo; @include breakpoint(phablet) { margin-bottom: $spaceOne; } }
+.mb3{margin-bottom:$spaceThree; @include breakpoint(phablet) { margin-bottom: $spaceTwo; } }
+.mb4{margin-bottom:$spaceFour; @include breakpoint(phablet) { margin-bottom: $spaceThree; }}
+.mb5{margin-bottom:$spaceFive; @include breakpoint(phablet) { margin-bottom: $spaceFour; } }
+.preloader { position:fixed; width:100%; height:100%; overflow:hidden; }
+.spinner { position: absolute; width:80px; height:80px; top: 50%; left: 50%; margin-left:-40px; margin-top:-40px; @include animation(rotatee 2.0s infinite linear); }
+.s-dot { display: inline-block; position: absolute; width:60%; height:60%;  top: 0; background-color:$coBlack; @include border-radius(100%); @include animation(bouncee 2.0s infinite ease-in-out); }
+.s-dot2 { top: auto; bottom: 0px; @include animation-delay( -1.0s); }
+@include keyframes(rotatee) { 100% { @include transform(rotate(360deg)); } }
+@include keyframes(bouncee) { 0%, 100% { @include transform(scale(0.0)); } 50% { @include transform(scale(1.0)); } }
+.explorer .preloader { background:#fff url('../images/page_template/loading.gif') no-repeat center; }
+.explorer .preloader .spinner { display:none; }
+// this is area is for reserved class
+
+// you can include here the rest of your class name eg. home page

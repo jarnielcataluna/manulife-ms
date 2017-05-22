@@ -1,20 +1,33 @@
 // includes all tags for paragraphs and titles such as header, p, span
-h1 { font-size: 72px; }
-h2 { font-size: 1.5em; }
-h3 { font-size: 1.17em; }
-h4 { font-size: 1em; }
-h5 { font-size: 0.83em; }
-h6 { font-size: 0.67em; }
-.par p { padding:10px 0px; }
-.par2 p { padding:5px 0px; }
-.bp-center { text-align:center; }
-.bp-left { text-align:left; }
-.bp-right { text-align:right; }
-.bp-justify { text-align:justify; }
-.bp-tt { text-transform:uppercase; }
-.par-small { font-size: $fontSmall; }
-.par-medium { @include responsive-font-size (12px, 14px, 640px, 1200px, 0px); }
-.par-large { @include responsive-font-size (13px, 16px, 640px, 1200px, 0px); }
-.par-xlarge { @include responsive-font-size (14px, 18px, 640px, 1200px, 0px); }
-.par-xxlarge { @include responsive-font-size (16px, 20px, 640px, 1200px, 0px); }
-.par-max { @include responsive-font-size (20px, 24px, 640px, 1200px, 0px); }
+h1 { 
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 50px;
+}
+h2 { 
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 38px;
+}
+h3 { 
+	font-size: 20px;
+	font-weight: 700;
+}
+h4 { 
+	font-size: 1em;
+	font-weight: 700;
+}
+h5 { 
+	font-size: 0.83em;
+	font-weight: 700;
+}
+h6 { 
+	font-size: 0.67em;
+	font-weight: 700;
+}
+.par p { padding: 10px 0px; }
+.par2 p { padding: 5px 0px; }
+
+.text-center {
+	text-align: center;
+}

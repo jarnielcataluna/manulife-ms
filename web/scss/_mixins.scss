@@ -189,6 +189,45 @@
 // example use
 // @include backface-visibility(hidden);
 
+@mixin gradient-text($gradient, $bg : 'light') {
+  @supports(mix-blend-mode: lighten) {
+    display: inline-block;
+    position: relative;
+    
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 99%;
+      top: 0; 
+      right: 0;
+      bottom: 0;
+      left: 0;
+      
+      background: unquote($gradient);
+      pointer-events: none;
+    }
+
+    @if ($bg == 'light') {
+      color: #000;
+      background: #fff;
+      mix-blend-mode: multiply;
+
+      &::before {
+        mix-blend-mode: screen;
+      }
+    } @else {
+      color: #fff;
+      background: #000;
+      mix-blend-mode: lighten;
+
+      &::before {
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+}
+
 
 
 // for background linear gradient
@@ -240,21 +279,20 @@
     @media (max-width: $maxWidth) { @content; }
   }
   @else if $point == desktop {
-    @media (max-width: 1100px) { @content; }
+    @media (max-width: 1024px) { @content; }
   }
   @else if $point == tablet {
     @media (max-width: 991px) { @content; }
   }
   @else if $point == tablet2 {
-    @media (max-width: 767px) { @content; }
+    @media (max-width: 768px) { @content; }
   }
   @else if $point == phablet {
-    @media (max-width: 640px) { @content; }
+    @media (max-width: 640px)  { @content; }
   }
   @else if $point == mobile {
-    @media (max-width: 480px) { @content; }
+    @media (max-width: 480px)  { @content; }
   }
-  
 }
 // example use
 // @include breakpoint(tablet) {

@@ -1,0 +1,10 @@
+.logo {
+  width: 102px;
+  height: 102px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
