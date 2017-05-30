@@ -372,23 +372,24 @@ $(document).ready(function() {
     	$('#subscribeNewsletter .input-wrap:not(.no-error)').addClass('error');
         isvalidate = false;
 
-        if( IsEmail($('#c-account-email').val() )) {
-            $('#c-account-email').closest('.input-wrap').removeClass('error');
+        if( IsEmail($('#account-email').val() )) {
+            $('#account-email').closest('.input-wrap').removeClass('error');
             isvalidate = true;
         } else {
             isvalidate = false;
         }
 
-        if( !$('#full-name').val() == '' ) {
-            $('#full-name').closest('.input-wrap').removeClass('error');
+        if( !$('#first-name').val() == '' ) {
+            $('#first-name').closest('.input-wrap').removeClass('error');
             isvalidate = true;
         } else {
             isvalidate = false;
         }
 
-        if(!$('#c-account-email').val() == '' && !$('#full-name').val() == '' ) {
-        	return true;
+        if(!$('#account-email').val() == '' && !$('#first-name').val() == '' ) {
         	console.log('submitted');
+        	return true;
+        	
         } else {
         	return false;
         }
@@ -437,12 +438,12 @@ $(window).load(function() {
 				    if (!slider.playing) {
 				      slider.play();
 				    }
-				    $('.banner-text h1 span').removeClass('animated');
-				    $('.banner-text h1, .banner-text p, .banner-text .btn').removeClass('animated');	
+				    $('.banner-text h1 span').removeClass('is-animated');
+				    $('.banner-text h1, .banner-text p, .banner-text .btn').removeClass('is-animated');	
 				    var test = $(slider).find('.flex-active-slide').find('.home-slide-item').data('text');
 				    setTimeout(function(){
-				    	$('.banner-text h1, .banner-text p, .banner-text .btn').addClass('animated');	
-					    $('.banner-text h1 span').html(test).addClass('animated');	
+				    	$('.banner-text h1, .banner-text p, .banner-text .btn').addClass('is-animated');	
+					    $('.banner-text h1 span').html(test).addClass('is-animated');	
 					}, 400);
 				}
 			});

@@ -285,7 +285,7 @@
     @media (max-width: 991px) { @content; }
   }
   @else if $point == tablet2 {
-    @media (max-width: 768px) { @content; }
+    @media (max-width: 767px) { @content; }
   }
   @else if $point == phablet {
     @media (max-width: 640px)  { @content; }
