@@ -129,10 +129,15 @@ body {
         text-transform: uppercase;
     }
 
+    .input-wrap.error input[type="text"], .input-wrap.error input[type="email"], .input-wrap.error input[type="number"], .input-wrap.error input[type="tel"], .input-wrap.error input[type="password"] {
+        border-bottom: 2px solid #792e2e !important;
+    }
+
     .required-field {
 
         p {
             text-align: left;
+            color: #792e2e;
         }
     }
 }
